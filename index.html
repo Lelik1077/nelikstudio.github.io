@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>MyNetwork</title>
+
+        <meta charset="utf-8>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <link href="/css/ktoto.css" rel="stylesheet">
+
+        <script>
+
+var opened=false
+
+function bar(){
+
+   sidebar=document.querySelector(".sidenav")
+
+    if(opened==false){
+
+        sidebar.style.width="75%";
+
+        opened=true
+
+    }else{
+
+        sidebar.style.width="0px";
+
+        opened=false
+
+    }
+
+}
+
+function scrll(el){
+
+    els=document.getElementById(el)
+
+    els.scrollIntoView()
+
+    bar()
+
+}
+
+        </script>
+
+    
+
+    </head>
+
+    <body class="pack wrap">
+
+    
+
+    <!--navbar-->
+
+    <nav class="nav gold text-auto" style="z-index:99"><b>Меню</b>
+
+    <button class="btn blue right" onclick="bar()">   
+
+    <i class="material-icons">menu</i>    
+
+    </button>
+
+    </nav>
+
+    <!--sidebar-->
+
+    <div class="sidenav blue text-bright">
+
+        <ul>
+
+        	<li onclick="scrll('about')">О NelikStudio</li>            <li onclick="scrll('news')">Файлы</li>
+
+        </ul>
+
+    </div>
+
+    
+
+    <!--content-->
+
+    	<h1>NelikStudio</h1>
+
+    	<hr>
+
+        <h2 id="about">Что такое NelikStudio?</h2>
+
+        <p>Пояснения за NelikStudio</p>
+
+        <hr>
+
+        <div id="news" class="card">
+
+            <h2>Тут должны быть новости но их нема</h2>
+
+        </div>
+
+       
+
+       <hr>
+
+        <div class="text-center">
+
+          <h4>NelikStudio</h4>
+
+        </div>
+
+    </body>
+
+</html>
